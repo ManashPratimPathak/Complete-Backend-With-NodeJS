@@ -11,7 +11,7 @@ router.get('/', (req, res, next)=>{
     // console.log("shop.js "+ adminData.products);
     // res.sendFile(path.join(rootDir,"views", "shop.html")); // res.sendFile('/views/shop.html'); this doesnt work because / here refer to root folder of our computer
     
-    res.render('shop', {prods: products, docTitle: "Shop", path: "/"});
+    res.render('shop', {prods: products, docTitle: "Shop", path: "/", hasProducts : products.length > 0});
 });
 //__dirname is the global variable defined by nodejs that holds tha absolute path of our operating system to our project folder
 module.exports = router;
